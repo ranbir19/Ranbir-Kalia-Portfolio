@@ -210,9 +210,10 @@ const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-hero px-4 pt-16 relative overflow-hidden">
       <BackgroundAnimation />
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      {/* Mobile: flex-col, Desktop: grid-cols-2 */}
+      <div className="max-w-6xl mx-auto flex flex-col-reverse md:grid md:grid-cols-2 gap-12 items-center">
         {/* Text Content */}
-        <div className="space-y-6 text-center md:text-left">
+        <div className="space-y-6 text-center md:text-left w-full">
           <div className="space-y-4">
             <h1 className="font-display leading-tight">
               <MixedColorTypingAnimation speed={100} />
@@ -280,7 +281,7 @@ const Hero = () => {
         </div>
 
         {/* Profile Image */}
-        <div className="flex justify-center md:justify-end">
+        <div className="flex justify-center md:justify-end w-full mb-8 md:mb-0">
           <div className="relative group">
             {/* Animated Background Rings */}
             <div className="absolute inset-0 rounded-full">
@@ -288,19 +289,16 @@ const Hero = () => {
               <div className="absolute inset-2 rounded-full bg-gradient-primary opacity-15 animate-ping [animation-duration:4s] [animation-delay:1s]"></div>
               <div className="absolute inset-4 rounded-full bg-accent opacity-10 animate-ping [animation-duration:5s] [animation-delay:2s]"></div>
             </div>
-            
             {/* Rotating Gradient Border */}
             <div className="absolute -inset-6 rounded-full bg-gradient-conic from-primary via-accent to-primary opacity-30 animate-spin [animation-duration:15s]"></div>
             <div className="absolute -inset-4 rounded-full bg-gradient-conic from-accent via-primary to-accent opacity-20 animate-spin [animation-duration:25s] [animation-direction:reverse]"></div>
-            
             {/* Floating Orbs */}
             <div className="absolute top-8 right-8 w-4 h-4 bg-accent rounded-full animate-bounce [animation-delay:0.5s] opacity-60"></div>
             <div className="absolute bottom-12 left-8 w-3 h-3 bg-primary rounded-full animate-bounce [animation-delay:1s] opacity-70"></div>
             <div className="absolute top-1/3 -right-4 w-2 h-2 bg-accent rounded-full animate-ping [animation-delay:2s]"></div>
             <div className="absolute bottom-1/3 -left-4 w-2 h-2 bg-primary rounded-full animate-ping [animation-delay:3s]"></div>
-            
-  {/* Main Image Container with Heart Animation */}
-  <HeroPhotoWithHeart profileImage={profileImage} />
+            {/* Main Image Container with Heart Animation */}
+            <HeroPhotoWithHeart profileImage={profileImage} />
           </div>
         </div>
       </div>
