@@ -281,7 +281,7 @@ const Hero = () => {
         </div>
 
         {/* Profile Image */}
-        <div className="flex justify-center md:justify-end w-full mb-8 md:mb-0">
+        <div className="flex justify-center md:justify-end w-full mb-8 md:mb-0 mt-8 md:mt-0">
           <div className="relative group">
             {/* Animated Background Rings */}
             <div className="absolute inset-0 rounded-full">
