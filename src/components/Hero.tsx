@@ -119,7 +119,7 @@ function HeroPhotoWithHeart({ profileImage }) {
 
   return (
     <div
-      className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-96 md:h-96 rounded-full overflow-hidden shadow-elegant border-4 border-border group-hover:shadow-glow transition-all duration-700 group-hover:scale-110 group-hover:-rotate-2 cursor-pointer"
+      className="relative w-32 h-32 sm:w-48 sm:h-48 md:w-96 md:h-96 rounded-full overflow-hidden shadow-elegant border-4 border-border group-hover:shadow-glow transition-all duration-700 group-hover:scale-110 group-hover:-rotate-2 cursor-pointer mx-auto mt-2 mb-4"
       onClick={handleClick}
     >
       <img
