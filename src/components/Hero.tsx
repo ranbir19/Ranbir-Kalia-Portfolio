@@ -293,14 +293,14 @@ const Hero = () => {
               <span className="drop-shadow-lg" style={{ color: '#a21caf' }}>Click the picture</span>
             </div>
           </div>
-          {/* Arrow and Label for Mobile (below image, pointing up) */}
-          <div className="flex md:hidden flex-col items-center w-full absolute left-1/2 bottom-[-60px] -translate-x-1/2 z-20 animate-arrow-label-bounce">
-            {/* Upward Arrow SVG */}
-            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" style={{ filter: 'drop-shadow(0 2px 8px #a21caf)' }}>
-              <line x1="25" y1="40" x2="25" y2="10" stroke="#a21caf" strokeWidth="5" strokeLinecap="round" />
-              <polyline points="15,20 25,10 35,20" fill="none" stroke="#a21caf" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
+          {/* Arrow and Label for Mobile (centered below image, pointing up) */}
+          <div className="flex md:hidden flex-col items-center absolute left-1/2" style={{ bottom: '-32px', transform: 'translateX(-50%)' }}>
+            {/* Upward Arrow SVG, shorter and closer to image */}
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" style={{ filter: 'drop-shadow(0 2px 8px #a21caf)' }}>
+              <line x1="20" y1="32" x2="20" y2="10" stroke="#a21caf" strokeWidth="4" strokeLinecap="round" />
+              <polyline points="13,18 20,10 27,18" fill="none" stroke="#a21caf" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            <div className="mt-2 text-base font-bold text-center" style={{letterSpacing:'0.5px', background:'none'}}>
+            <div className="mt-1 text-base font-bold text-center" style={{letterSpacing:'0.5px', background:'none'}}>
               <span className="drop-shadow-lg" style={{ color: '#a21caf' }}>Click the picture</span>
             </div>
           </div>
