@@ -280,8 +280,39 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Profile Image */}
-        <div className="flex justify-center md:justify-end w-full mb-8 md:mb-0 mt-8 md:mt-0">
+        {/* Profile Image with Responsive Arrow and Label */}
+        <div className="flex justify-center md:justify-end w-full mb-8 md:mb-0 mt-8 md:mt-0 relative">
+          {/* Arrow and Label for Desktop (left) */}
+          <div className="hidden md:flex flex-col items-center absolute left-0 top-1/2 -translate-y-1/2 z-20 animate-arrow-label-bounce" style={{ minWidth: '120px' }}>
+            {/* Straight Arrow SVG */}
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" style={{ filter: 'drop-shadow(0 2px 8px #a21caf)' }}>
+              <line x1="0" y1="30" x2="50" y2="30" stroke="#a21caf" strokeWidth="5" strokeLinecap="round" />
+              <polyline points="40,20 50,30 40,40" fill="none" stroke="#a21caf" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            <div className="mt-3 text-base font-bold text-center" style={{letterSpacing:'0.5px', background:'none'}}>
+              <span className="drop-shadow-lg" style={{ color: '#a21caf' }}>Click the picture</span>
+            </div>
+          </div>
+          {/* Arrow and Label for Mobile (below image, pointing up) */}
+          <div className="flex md:hidden flex-col items-center w-full absolute left-1/2 bottom-[-60px] -translate-x-1/2 z-20 animate-arrow-label-bounce">
+            {/* Upward Arrow SVG */}
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" style={{ filter: 'drop-shadow(0 2px 8px #a21caf)' }}>
+              <line x1="25" y1="40" x2="25" y2="10" stroke="#a21caf" strokeWidth="5" strokeLinecap="round" />
+              <polyline points="15,20 25,10 35,20" fill="none" stroke="#a21caf" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            <div className="mt-2 text-base font-bold text-center" style={{letterSpacing:'0.5px', background:'none'}}>
+              <span className="drop-shadow-lg" style={{ color: '#a21caf' }}>Click the picture</span>
+            </div>
+          </div>
+          <style>{`
+            @keyframes arrow-label-bounce {
+              0%, 100% { transform: translateY(0); }
+              50% { transform: translateY(-10px); }
+            }
+            .animate-arrow-label-bounce {
+              animation: arrow-label-bounce 1.2s infinite cubic-bezier(.5,.2,.5,1);
+            }
+          `}</style>
           <div className="relative group">
             {/* Animated Background Rings */}
             <div className="absolute inset-0 rounded-full">
