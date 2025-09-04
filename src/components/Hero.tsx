@@ -294,14 +294,14 @@ const Hero = () => {
             </div>
           </div>
           {/* Arrow and Label for Mobile (centered below image, pointing up) */}
-              <div className="flex md:hidden flex-col items-center absolute left-1/2 z-30" style={{ bottom: '-40px', transform: 'translateX(-50%)' }}>
-                {/* Upward Arrow SVG, larger and bolder for visibility */}
-                <svg width="56" height="56" viewBox="0 0 56 56" fill="none" style={{ filter: 'drop-shadow(0 2px 12px #a21caf)' }}>
-                  <line x1="28" y1="44" x2="28" y2="14" stroke="#a21caf" strokeWidth="7" strokeLinecap="round" />
-                  <polyline points="18,24 28,14 38,24" fill="none" stroke="#a21caf" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
+              <div className="flex md:hidden flex-col items-center absolute left-1/2" style={{ bottom: '-32px', transform: 'translateX(-50%)' }}>
+                {/* Upward Arrow SVG, shorter and closer to image */}
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" style={{ filter: 'drop-shadow(0 2px 8px #a21caf)' }}>
+                  <line x1="20" y1="32" x2="20" y2="10" stroke="#a21caf" strokeWidth="4" strokeLinecap="round" />
+                  <polyline points="13,18 20,10 27,18" fill="none" stroke="#a21caf" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-                <div className="mt-2 text-base font-bold text-center" style={{letterSpacing:'0.5px', background:'none'}}>
-                  <span className="drop-shadow-lg" style={{ color: '#a21caf', textShadow: '0 0 8px #fff, 0 0 4px #a21caf' }}>Click the picture</span>
+                <div className="mt-1 text-base font-bold text-center" style={{letterSpacing:'0.5px', background:'none'}}>
+                  <span className="drop-shadow-lg" style={{ color: '#a21caf' }}>Click the picture</span>
                 </div>
               </div>
           <style>{`
